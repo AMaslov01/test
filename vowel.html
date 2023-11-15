@@ -1,0 +1,40 @@
+<!--Artemiy Maslov
+C00290945
+15.11.2023
+Lab6
+E7-->
+<!DOCTYPE html>
+<meta charset="UTF-8">
+<html>
+<head>
+<title>Check for Vowel</title> <!-- Title of the HTML page -->
+</head>
+<body>
+<script>
+
+// Function to check if a character is a vowel
+function myVowel(character){
+    character = character.toUpperCase(); // Convert the character to uppercase for case insensitivity
+
+    // Check if the character is one of the vowels (A, E, I, O, U)
+    if(character == "A" || character == "E" || character == "I" || character == "O" || character == "U"){
+        return true; // Return true if the character is a vowel
+    }
+    else{
+        return false; // Return false if the character is not a vowel
+    }
+}
+
+// Prompt the user to input a character to check if it's a vowel or not
+var character = prompt("Input a character to check whether it is a vowel or not", "");
+
+// Validate the input to ensure it's a single character
+while(character.length != 1){
+    character = prompt("Input a single character to check whether it is a vowel or not", "");
+}
+
+// Display the result - check if the input character is a vowel or not
+document.write("It is a vowel: " + myVowel(character));
+</script>
+</body>
+</html>
